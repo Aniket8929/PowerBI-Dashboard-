@@ -1,0 +1,27 @@
+📊 Dashboard Highlights
+Total Sales, Profit & Quantity: Aggregated from the Amount, Profit, and Quantity columns.
+
+Sales by Product Category & Sub-Category: Breakdown of what’s selling best (e.g., Phones, Printers, Chairs).
+
+Order Trends by Date: Based on Order Date for time series analysis.
+
+Top Cities and States: Performance by location using City and State.
+
+Customer Insights: Repeat customers or top spenders using CustomerName.
+
+Payment Mode Distribution: Breakdown of payments (COD, EMI, Credit Card, etc.).
+
+Order Drilldown: Link between Order ID in both files allows detailed view from summary to item level.
+
+🎯 Purpose of the Dashboard
+This dashboard enables Madhav Company to:
+
+Analyze sales performance across time, location, and product type.
+
+Identify high-profit areas and best-selling items.
+
+Understand customer behavior and purchasing patterns.
+
+Track payment preferences to improve the checkout experience.
+
+Support data-driven decisions for marketing, inventory, and sales strategy.
