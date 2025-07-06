@@ -1,0 +1,43 @@
+The goal of this project is to build an interactive dashboard using Power BI to:
+
+Analyze sales, profits, and quantity trends
+
+Identify top-performing regions, categories, and sub-categories
+
+Provide actionable business insights for decision-makers
+
+Demonstrate skills in Power BI data modeling, transformation, and visualization
+
+🧰 Tools & Technologies Used:
+Power BI Desktop
+Power Query Editor
+DAX (Data Analysis Expressions)
+csv as data source
+
+📊 Dataset Overview:
+
+SuperStore Sales Dataset
+Contains data related to a retail store’s operations, including:
+
+Order ID, Order Date, Ship Date
+
+Customer Name, Segment, Region
+
+Product Category, Sub-Category
+
+Sales, Quantity, Profit
+
+📈 Key Features in Dashboard:
+
+📅 Date-based filtering (Monthly/Quarterly/Yearly)
+
+📍 Regional performance analysis
+
+📦 Category/Sub-category performance
+
+🚚 Shipping and delivery time insights
+
+📉 Forecasting future sales trends (based on historical data)
+
+🔍 Top N product/category drill-down
+
