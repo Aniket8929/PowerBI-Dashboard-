@@ -47,3 +47,70 @@ New Column बनाते समय
 
 Calculated Table बनाने के लिए
 👉 Example: SummaryTable = SUMMARIZE(Sales, Sales[Region], "Total", SUM(Sales[Amount]))
+
+
+
+✅ Aggregate Functions ka kuch Example hai 
+
+
+🔹 1. SUM()
+Use: किसी column का total निकालना
+📘 Example:
+Total Sales = SUM(Sales[Amount])
+✅ कब Use करें: जब numeric values का total चाहिए
+✅ क्यों Use करें: Basic sales, revenue, profit जैसे metrics के लिए
+
+🔹 2. AVERAGE()
+Use: Average निकालना
+
+📘 Example:
+Average Order Value = AVERAGE(Sales[Amount])
+✅ कब Use करें: जब आप जानना चाहें कि एक order में average कितना खर्च हुआ
+
+🔹 3. MAX()
+Use: सबसे बड़ी value निकालना
+
+📘 Example:
+Max Sale = MAX(Sales[Amount])
+✅ कब Use करें: Best performance, highest revenue product जानने के लिए
+
+🔹 4. MIN()
+Use: सबसे छोटी value निकालना
+
+📘 Example:
+Min Sale = MIN(Sales[Amount])
+✅ कब Use करें: Least sale finding या minimum pricing analysis के लिए
+
+🔹 5. COUNT()
+Use: किसी column में कितनी entries हैं
+
+📘 Example:
+Order Count = COUNT(Sales[OrderID])
+✅ कब Use करें: कितने orders हुए – ये जानने के लिए
+
+🔹 6. COUNTA()
+Use: Count non-blank values (text + number)
+📘 Example:
+Product Count = COUNTA(Sales[ProductName])
+✅ कब Use करें: जब आप check करना चाहें कि कितनी rows में value present है
+
+🔹 7. COUNTBLANK()
+Use: Count blank (empty) cells
+📘 Example:
+Missing Region = COUNTBLANK(Sales[Region])
+✅ कब Use करें: Data quality check के लिए – कितनी rows missing हैं
+
+🔹 8. DISTINCTCOUNT()
+Use: Unique values count करना
+
+📘 Example:
+Unique Customers = DISTINCTCOUNT(Sales[CustomerID])
+✅ कब Use करें: कितने अलग-अलग customers ने खरीदा
+
+🔹 9. SUMX() (Iterator Function)
+📘 Use Case: Quantity × Price का total
+
+
+Total Revenue = SUMX(Sales, Sales[Quantity] * Sales[UnitPrice])
+✅ कब Use करें: जब calculation row-wise होनी हो और फिर उसका total निकले
+✅ क्यों Use करें: Row-wise complex calculation करने के लिए
