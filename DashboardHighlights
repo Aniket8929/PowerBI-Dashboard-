@@ -1,28 +1,49 @@
-📊 Dashboard Highlights
-Total Sales, Profit & Quantity: Aggregated from the Amount, Profit, and Quantity columns.
+DAX  (Data Analysis Expressions)
 
-Sales by Product Category & Sub-Category: Breakdown of what’s selling best (e.g., Phones, Printers, Chairs).
+Power BI में DAX (Data Analysis Expressions) एक formula language है, जो हम calculations aur data analysis ke liye use karte हैं – जैसे:
 
-Order Trends by Date: Based on Order Date for time series analysis.
+1) नई columns,
+2)measures (जैसे total, average, count),
+3)और advanced logic (जैसे running total, year-to-date sales).
 
-Top Cities and States: Performance by location using City and State.
 
-Customer Insights: Repeat customers or top spenders using CustomerName.
+🔹 DAX की Categories (Main Types)
+✅ Aggregate Functions
+Data का total, average, max, min निकालने के लिए।\
+🧮 Examples: SUM(), AVERAGE(), MAX(), MIN(), COUNT()
+✅ Logical Functions
+IF-Else जैसी conditions बनाने के लिए।
+🧠 Examples:IF(), SWITCH(), AND(), OR(), NOT()
+✅ Text Functions
+Text (string) values को manipulate करने के लिए।
+✂️ Examples:LEFT(), RIGHT(), LEN(), CONCATENATE(), UPPER()
+✅ Date and Time Functions
+Date-based calculations के लिए।
+🗓️ Examples:
+TODAY(), NOW(), YEAR(), MONTH(), DATEDIFF()
+✅ Filter Functions
+Data को filter करने के लिए calculations में।
+🔍 Examples:
+FILTER(), ALL(), CALCULATE(), REMOVEFILTERS()
+✅ Time Intelligence Functions
+Time-based analysis जैसे YTD (Year-To-Date), QTD (Quarter-To-Date)
+📊 Examples:
+TOTALYTD(), SAMEPERIODLASTYEAR(), DATESMTD()
+✅ Table Functions
+Entire tables को manipulate करने के लिए।
+🧾 Examples:
+VALUES(), DISTINCT(), ADDCOLUMNS(), SUMMARIZE()
+✅ Information Functions
+किसी value की जानकारी देने के लिए (जैसे blank है या number है)
+ℹ️ Examples:
+ISBLANK(), ISNUMBER(), ISTEXT()
 
-Payment Mode Distribution: Breakdown of payments (COD, EMI, Credit Card, etc.).
+🔹 DAX कहाँ Use होता है Power BI में?
+New Measure बनाते समय
+👉 Example: Total Sales = SUM(Sales[Amount])
 
-Order Drilldown: Link between Order ID in both files allows detailed view from summary to item level.
+New Column बनाते समय
+👉 Example: Profit = Sales[Amount] - Sales[Cost]
 
-🎯 Purpose of the Dashboard
-This dashboard enables Madhav Company to:
-
-Analyze sales performance across time, location, and product type.
-
-Identify high-profit areas and best-selling items.
-
-Understand customer behavior and purchasing patterns.
-
-Track payment preferences to improve the checkout experience.
-
-Support data-driven decisions for marketing, inventory, and sales strategy.
-
+Calculated Table बनाने के लिए
+👉 Example: SummaryTable = SUMMARIZE(Sales, Sales[Region], "Total", SUM(Sales[Amount]))
